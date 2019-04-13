@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kyexpress.ec.springboot_ssm.dao.mapper.UserMapper">
+    <!--查询所有用户-->
+    <select id="listUser"  resultType="com.kyexpress.ec.springboot_ssm.pojo.User">
+        SELECT id,name,age FROM stu;
+    </select>
+
+    <!--根据id查询用户-->
+    <select id="getUserById" resultType="User">
+        select id,name,age from stu where id=#{id};
+    </select>
+
+    <!--添加用户-->
+    <insert id="addUser" parameterType="User">
+        insert into stu(name,age) values(#{name},#{age});
+    </insert>
+
+    <!--更新用户-->
+    <update id="update" parameterType="User">
+        update stu set name=#{name},age=#{age} where id=#{id};
+    </update>
+
+    <!--删除用户-->
+    <delete id="deleteById" parameterType="_int">
+        delete from stu where id=#{id};
+    </delete>
+</mapper>
