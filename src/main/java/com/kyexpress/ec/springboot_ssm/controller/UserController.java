@@ -75,4 +75,11 @@ public class UserController {
         userService.deleteById(id);
         return "delete success!";
     }
+
+    //批量删除用户
+    @RequestMapping("/deleteByIds")
+    public String deleteByIds(Integer[] ids){
+        System.out.println(ids);
+        return "success";
+    }
 }
