@@ -43,4 +43,10 @@ public interface UserService {
      * @param id
      */
     void deleteById(int id);
+
+    /**
+     *批量删除用户
+     * @param ids
+     */
+    void deleteByIds(List<Integer> ids);
 }

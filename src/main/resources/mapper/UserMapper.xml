@@ -25,4 +25,12 @@
     <delete id="deleteById" parameterType="_int">
         delete from stu where id=#{id};
     </delete>
+
+    <!--批量删除用户-->
+    <delete id="deleteByIds" parameterType="List">
+        delete from stu where id in
+        <foreach collection="list" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
 </mapper>

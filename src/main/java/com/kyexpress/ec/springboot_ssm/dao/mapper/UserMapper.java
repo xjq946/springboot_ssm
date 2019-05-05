@@ -14,7 +14,8 @@ import java.util.List;
  * @author xiejiqing
  * @create 2019/4/13 11:40
  */
-@Repository
+//@Repository
+@Mapper
 public interface UserMapper {
 
     /**
@@ -47,4 +48,10 @@ public interface UserMapper {
      * @param id
      */
     void deleteById(int id);
+
+    /**
+     *批量删除用户
+     * @param ids
+     */
+    void deleteByIds(List<Integer> ids);
 }

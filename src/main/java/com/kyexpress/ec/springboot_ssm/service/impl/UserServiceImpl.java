@@ -48,4 +48,9 @@ public class UserServiceImpl implements UserService {
     public void deleteById(int id) {
         userMapper.deleteById(id);
     }
+
+    @Override
+    public void deleteByIds(List<Integer> ids) {
+        userMapper.deleteByIds(ids);
+    }
 }

@@ -9,7 +9,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @SpringBootApplication
 @EnableScheduling//开启基于注解的定时任务
 @EnableAsync//开启异步注解功能
-@MapperScan("com.kyexpress.ec.springboot_ssm.dao.mapper")
+//@MapperScan("com.kyexpress.ec.springboot_ssm.dao.mapper")
 public class SpringbootSsmApplication {
 
     public static void main(String[] args) {

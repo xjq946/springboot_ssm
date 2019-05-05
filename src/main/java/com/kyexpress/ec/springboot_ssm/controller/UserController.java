@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -78,8 +79,8 @@ public class UserController {
 
     //批量删除用户
     @RequestMapping("/deleteByIds")
-    public String deleteByIds(Integer[] ids){
-        System.out.println(ids);
-        return "success";
+    public String deleteByIds(@RequestBody List<Integer> ids){
+        userService.deleteByIds(ids);
+        return "delete success";
     }
 }
