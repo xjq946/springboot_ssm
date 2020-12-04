@@ -13,13 +13,7 @@ import javax.mail.internet.MimeMessage;
 import java.io.File;
 import java.util.Date;
 
-/**
- * Copyright (c) 2019 KYE Company
- * 跨越速运集团有限公司版权所有
- *
- * @author xiejiqing
- * @create 2019/5/4 15:41
- */
+
 @Service
 public class SpringTaskService {
 
